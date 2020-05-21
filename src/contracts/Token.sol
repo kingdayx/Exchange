@@ -2,14 +2,14 @@ pragma solidity ^0.5.0;
 
 contract Token{
     string public name = "Elisha Token";
-    string public symbol = "DAPP";
+    string public symbol = "ElishaCoin";
     uint256 public totalSupply = 1000000000000000000;
-    uint8 public decimals = 10;
-    
+    uint8 public decimals = 18;
+
     event Transfer(
         address indexed _from,
         address indexed _to,
-        uint256 _valueq
+        uint256 _value
     );
 
     event Approval(
@@ -20,7 +20,7 @@ contract Token{
 
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
-    
+
     constructor() public{
         balanceOf[msg.sender] = totalSupply;
     }
