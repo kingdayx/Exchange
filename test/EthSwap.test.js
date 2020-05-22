@@ -23,10 +23,10 @@ contract('EthSwap',(accounts)=>{
         })
         it('contract has tokens', async()=>{
             let token = await Token.new()
-            let ethSwap = await EthSwap.new()
-            await token.transfer(ethSwap.address,'1000000000000000000')
+            let ethSwap = await EthSwap.new(token)
+            await token.transfer(ethSwap.address,'100000000')
             let balance = await token.balanceOf(ethSwap.address)
-            assert.equal(balance.toString(), '1000000000000000000')
+            assert.equal(balance.toString(), '100000000')
         })
     })
 })

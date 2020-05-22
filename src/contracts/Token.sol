@@ -3,8 +3,8 @@ pragma solidity ^0.5.0;
 contract Token{
     string public name = "Elisha Token";
     string public symbol = "ElishaCoin";
-    uint256 public totalSupply = 1000000000000000000;
-    uint8 public decimals = 18;
+    uint256 public totalSupply = 100000000;
+    uint8 public decimals = 8;
 
     event Transfer(
         address indexed _from,
